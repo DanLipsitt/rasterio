@@ -1,4 +1,7 @@
 language: python
+os:
+  - linux
+  - osx
 sudo: false
 cache:
   directories:
@@ -17,6 +20,7 @@ env:
     - GDALVERSION="2.2.4"
     - GDALVERSION="2.3.3"
     - GDALVERSION="2.4.0"
+    - GDALVERSION="3.0.0"
     - GDALVERSION="master"
 
 matrix:
@@ -36,6 +40,7 @@ addons:
 python:
   - "2.7"
   - "3.6"
+  - "3.7"
 before_script: # configure a headless display to test matplotlib
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
