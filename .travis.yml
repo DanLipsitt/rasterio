@@ -20,8 +20,8 @@ matrix:
   include:
     # MacOS doesn't directly support python language or pythons other than the default install
     - os: osx
-    - python: "3.7"
-    - language: shell
+      python: "3.7"
+      language: shell
 
 matrix:
   allow_failures:
