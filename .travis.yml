@@ -1,7 +1,4 @@
 language: python
-os:
-  - linux
-  - osx
 dist: xenial
 sudo: false
 cache:
@@ -18,6 +15,13 @@ env:
     - GDALVERSION="2.4.0"
     - GDALVERSION="3.0.0"
     - GDALVERSION="master"
+
+matrix:
+  include:
+    # MacOS doesn't directly support python language or pythons other than the default install
+    - os: osx
+    - python: "3.7"
+    - language: shell
 
 matrix:
   allow_failures:
